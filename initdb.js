@@ -3,117 +3,112 @@ const db = sql('meals.db');
 
 const dummyMeals = [
   {
-    title: 'Juicy Cheese Burger',
+    title: 'Burger Juteux au Fromage',
     slug: 'juicy-cheese-burger',
     image: '/images/burger.jpg',
-    summary:
-      'A mouth-watering burger with a juicy beef patty and melted cheese, served in a soft bun.',
+    summary: 'Un burger savoureux avec un steak haché juteux et du fromage fondu, servi dans un pain moelleux.',
     instructions: `
-      1. Prepare the patty:
-         Mix 200g of ground beef with salt and pepper. Form into a patty.
+      1. Préparer le steak :
+         Mélanger 200 g de bœuf haché avec du sel et du poivre. Former un steak.
 
-      2. Cook the patty:
-         Heat a pan with a bit of oil. Cook the patty for 2-3 minutes each side, until browned.
+      2. Cuire le steak :
+         Chauffer une poêle avec un peu d'huile. Cuire le steak 2-3 minutes de chaque côté jusqu'à ce qu'il soit doré.
 
-      3. Assemble the burger:
-         Toast the burger bun halves. Place lettuce and tomato on the bottom half. Add the cooked patty and top with a slice of cheese.
+      3. Assembler le burger :
+         Griller les moitiés du pain. Placer la laitue et la tomate sur la moitié inférieure. Ajouter le steak cuit et une tranche de fromage.
 
-      4. Serve:
-         Complete the assembly with the top bun and serve hot.
+      4. Servir :
+         Compléter avec la moitié supérieure du pain et servir chaud.
     `,
     creator: 'John Doe',
     creator_email: 'johndoe@example.com',
   },
   {
-    title: 'Spicy Curry',
+    title: 'Curry Épicé',
     slug: 'spicy-curry',
     image: '/images/curry.jpg',
-    summary:
-      'A rich and spicy curry, infused with exotic spices and creamy coconut milk.',
+    summary: 'Un curry riche et épicé, infusé d\'épices exotiques et de lait de coco crémeux.',
     instructions: `
-      1. Chop vegetables:
-         Cut your choice of vegetables into bite-sized pieces.
+      1. Couper les légumes :
+         Couper les légumes de votre choix en morceaux.
 
-      2. Sauté vegetables:
-         In a pan with oil, sauté the vegetables until they start to soften.
+      2. Faire revenir les légumes :
+         Faire revenir les légumes dans une poêle avec de l'huile jusqu'à ce qu'ils commencent à ramollir.
 
-      3. Add curry paste:
-         Stir in 2 tablespoons of curry paste and cook for another minute.
+      3. Ajouter la pâte de curry :
+         Incorporer 2 cuillères à soupe de pâte de curry et cuire encore une minute.
 
-      4. Simmer with coconut milk:
-         Pour in 500ml of coconut milk and bring to a simmer. Let it cook for about 15 minutes.
+      4. Laisser mijoter avec le lait de coco :
+         Ajouter 500 ml de lait de coco et porter à ébullition. Laisser cuire environ 15 minutes.
 
-      5. Serve:
-         Enjoy this creamy curry with rice or bread.
+      5. Servir :
+         Déguster ce curry crémeux avec du riz ou du pain.
     `,
     creator: 'Max Schwarz',
     creator_email: 'max@example.com',
   },
   {
-    title: 'Homemade Dumplings',
+    title: 'Raviolis Maison',
     slug: 'homemade-dumplings',
     image: '/images/dumplings.jpg',
-    summary:
-      'Tender dumplings filled with savory meat and vegetables, steamed to perfection.',
+    summary: 'Des raviolis tendres garnis de viande et de légumes savoureux, cuits à la vapeur à la perfection.',
     instructions: `
-      1. Prepare the filling:
-         Mix minced meat, shredded vegetables, and spices.
+      1. Préparer la farce :
+         Mélanger de la viande hachée, des légumes râpés et des épices.
 
-      2. Fill the dumplings:
-         Place a spoonful of filling in the center of each dumpling wrapper. Wet the edges and fold to seal.
+      2. Garnir les raviolis :
+         Placer une cuillerée de farce au centre de chaque pâte à ravioli. Mouiller les bords et plier pour sceller.
 
-      3. Steam the dumplings:
-         Arrange dumplings in a steamer. Steam for about 10 minutes.
+      3. Cuire à la vapeur :
+         Disposer les raviolis dans un cuiseur vapeur. Cuire environ 10 minutes.
 
-      4. Serve:
-         Enjoy these dumplings hot, with a dipping sauce of your choice.
+      4. Servir :
+         Déguster chaud avec une sauce d'accompagnement au choix.
     `,
     creator: 'Emily Chen',
     creator_email: 'emilychen@example.com',
   },
   {
-    title: 'Classic Mac n Cheese',
+    title: 'Macaroni au Fromage Classique',
     slug: 'classic-mac-n-cheese',
     image: '/images/macncheese.jpg',
-    summary:
-      "Creamy and cheesy macaroni, a comforting classic that's always a crowd-pleaser.",
+    summary: 'Des macaronis crémeux et fromagés, un classique réconfortant toujours apprécié.',
     instructions: `
-      1. Cook the macaroni:
-         Boil macaroni according to package instructions until al dente.
+      1. Cuire les macaronis :
+         Faire cuire les macaronis selon les instructions jusqu'à ce qu'ils soient al dente.
 
-      2. Prepare cheese sauce:
-         In a saucepan, melt butter, add flour, and gradually whisk in milk until thickened. Stir in grated cheese until melted.
+      2. Préparer la sauce au fromage :
+         Faire fondre du beurre dans une casserole, ajouter de la farine et incorporer progressivement du lait en fouettant jusqu'à épaississement. Ajouter du fromage râpé jusqu'à ce qu'il fonde.
 
-      3. Combine:
-         Mix the cheese sauce with the drained macaroni.
+      3. Assembler :
+         Mélanger les macaronis égouttés avec la sauce au fromage.
 
-      4. Bake:
-         Transfer to a baking dish, top with breadcrumbs, and bake until golden.
+      4. Cuire au four :
+         Mettre le tout dans un plat, parsemer de chapelure et cuire jusqu'à ce que le dessus soit doré.
 
-      5. Serve:
-         Serve hot, garnished with parsley if desired.
+      5. Servir :
+         Servir chaud avec un peu de persil, si désiré.
     `,
     creator: 'Laura Smith',
     creator_email: 'laurasmith@example.com',
   },
   {
-    title: 'Authentic Pizza',
+    title: 'Pizza Authentique',
     slug: 'authentic-pizza',
     image: '/images/pizza.jpg',
-    summary:
-      'Hand-tossed pizza with a tangy tomato sauce, fresh toppings, and melted cheese.',
+    summary: 'Pizza artisanale avec une sauce tomate acidulée, des garnitures fraîches et du fromage fondu.',
     instructions: `
-      1. Prepare the dough:
-         Knead pizza dough and let it rise until doubled in size.
+      1. Préparer la pâte :
+         Pétrir la pâte à pizza et laisser lever jusqu'à ce qu'elle double de volume.
 
-      2. Shape and add toppings:
-         Roll out the dough, spread tomato sauce, and add your favorite toppings and cheese.
+      2. Façonner et garnir :
+         Étaler la pâte, étaler la sauce tomate et ajouter les garnitures et le fromage de votre choix.
 
-      3. Bake the pizza:
-         Bake in a preheated oven at 220°C for about 15-20 minutes.
+      3. Cuire la pizza :
+         Cuire au four préchauffé à 220°C pendant 15-20 minutes.
 
-      4. Serve:
-         Slice hot and enjoy with a sprinkle of basil leaves.
+      4. Servir :
+         Couper et savourer avec quelques feuilles de basilic.
     `,
     creator: 'Mario Rossi',
     creator_email: 'mariorossi@example.com',
@@ -122,42 +117,40 @@ const dummyMeals = [
     title: 'Wiener Schnitzel',
     slug: 'wiener-schnitzel',
     image: '/images/schnitzel.jpg',
-    summary:
-      'Crispy, golden-brown breaded veal cutlet, a classic Austrian dish.',
+    summary: 'Escalope de veau panée, dorée et croustillante, un plat autrichien classique.',
     instructions: `
-      1. Prepare the veal:
-         Pound veal cutlets to an even thickness.
+      1. Préparer le veau :
+         Aplatir les escalopes de veau à une épaisseur uniforme.
 
-      2. Bread the veal:
-         Coat each cutlet in flour, dip in beaten eggs, and then in breadcrumbs.
+      2. Paner le veau :
+         Enrober chaque escalope de farine, tremper dans des œufs battus, puis dans la chapelure.
 
-      3. Fry the schnitzel:
-      Heat oil in a pan and fry each schnitzel until golden brown on both sides.
+      3. Faire frire :
+         Chauffer de l'huile dans une poêle et cuire chaque escalope jusqu'à ce qu'elle soit dorée des deux côtés.
 
-      4. Serve:
-      Serve hot with a slice of lemon and a side of potato salad or greens.
- `,
+      4. Servir :
+         Servir chaud avec une tranche de citron et une salade de pommes de terre ou des légumes verts.
+    `,
     creator: 'Franz Huber',
     creator_email: 'franzhuber@example.com',
   },
   {
-    title: 'Fresh Tomato Salad',
+    title: 'Salade de Tomates Fraîches',
     slug: 'fresh-tomato-salad',
     image: '/images/tomato-salad.jpg',
-    summary:
-      'A light and refreshing salad with ripe tomatoes, fresh basil, and a tangy vinaigrette.',
+    summary: 'Une salade légère et rafraîchissante avec des tomates mûres, du basilic frais et une vinaigrette acidulée.',
     instructions: `
-      1. Prepare the tomatoes:
-        Slice fresh tomatoes and arrange them on a plate.
-    
-      2. Add herbs and seasoning:
-         Sprinkle chopped basil, salt, and pepper over the tomatoes.
-    
-      3. Dress the salad:
-         Drizzle with olive oil and balsamic vinegar.
-    
-      4. Serve:
-         Enjoy this simple, flavorful salad as a side dish or light meal.
+      1. Préparer les tomates :
+         Couper des tomates fraîches et les disposer sur une assiette.
+
+      2. Ajouter les herbes et l’assaisonnement :
+         Saupoudrer de basilic haché, de sel et de poivre.
+
+      3. Assaisonner la salade :
+         Arroser d'huile d'olive et de vinaigre balsamique.
+
+      4. Servir :
+         Déguster cette salade simple et savoureuse en accompagnement ou en plat léger.
     `,
     creator: 'Sophia Green',
     creator_email: 'sophiagreen@example.com',
@@ -165,31 +158,31 @@ const dummyMeals = [
 ];
 
 db.prepare(`
-   CREATE TABLE IF NOT EXISTS meals (
-       id INTEGER PRIMARY KEY AUTOINCREMENT,
-       slug TEXT NOT NULL UNIQUE,
-       title TEXT NOT NULL,
-       image TEXT NOT NULL,
-       summary TEXT NOT NULL,
-       instructions TEXT NOT NULL,
-       creator TEXT NOT NULL,
-       creator_email TEXT NOT NULL
-    )
+  CREATE TABLE IF NOT EXISTS meals (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    slug TEXT NOT NULL UNIQUE,
+    title TEXT NOT NULL,
+    image TEXT NOT NULL,
+    summary TEXT NOT NULL,
+    instructions TEXT NOT NULL,
+    creator TEXT NOT NULL,
+    creator_email TEXT NOT NULL
+  )
 `).run();
 
 async function initData() {
   const stmt = db.prepare(`
-      INSERT INTO meals VALUES (
-         null,
-         @slug,
-         @title,
-         @image,
-         @summary,
-         @instructions,
-         @creator,
-         @creator_email
-      )
-   `);
+    INSERT INTO meals VALUES (
+      null,
+      @slug,
+      @title,
+      @image,
+      @summary,
+      @instructions,
+      @creator,
+      @creator_email
+    )
+  `);
 
   for (const meal of dummyMeals) {
     stmt.run(meal);
